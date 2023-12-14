@@ -1,0 +1,17 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* this line of code gives the container div a height to grow */
+    height: 100%;
+}
+
+#home {
+    display: flex;
+    flex-direction: row;
+}
