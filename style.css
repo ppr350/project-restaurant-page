@@ -8,8 +8,8 @@
 
 @font-face {
     font-family: 'myFont';
-    src: url('./src/myFont.otf') format('otf'),
-        url('./src/myFont.ttf') format('ttf');
+    src: url('./src/FontA.woff') format('woff'),
+        url('./src/FontB.woff') format('woff');
 }
 
 html {
@@ -22,5 +22,5 @@ html {
     flex-direction: row;
 }
 h1 {
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family:'myFont';
 }
