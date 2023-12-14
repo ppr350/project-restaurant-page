@@ -6,12 +6,21 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'myFont';
+    src: url('./src/myFont.otf') format('otf'),
+        url('./src/myFont.ttf') format('ttf');
+}
+
 html {
     /* this line of code gives the container div a height to grow */
     height: 100%;
 }
 
-#home {
+#tab-browsing {
     display: flex;
     flex-direction: row;
+}
+h1 {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
