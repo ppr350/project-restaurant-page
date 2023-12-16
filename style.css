@@ -16,24 +16,20 @@ body {
     display: flex;
     flex-direction: column;
     border: 1px solid red;
+    background-color: rgb(232, 232, 232);
 }
 
 #content {
     flex: 1 0 auto;
-
-    /* test uploading image */
-    background: url('./home-image') no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
 }
 
-#inside-home {
+.inside-home {
     border: 1px solid blue;
+    max-width: calc(80% - 80px);
+    margin: 0 auto;
 }
 
-#tabbed-browsing {
+.tabbed-browsing {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -54,13 +50,7 @@ h3 {
     font-weight: lighter;
 }
 
-#inside-home {
-    max-width: calc(80% - 80px);
-    margin: 0 auto;
-}
-
 footer {
-    /* margin-top: auto; */
     flex-shrink: 0;
     max-width: calc(80% - 80px);
     margin: 0 auto;
