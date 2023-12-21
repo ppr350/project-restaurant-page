@@ -51,8 +51,21 @@ body {
     list-style: none;
 }
 
+.selected-content {
+    margin-top: 1rem;
+}
+
 .tabbed-options {
     cursor: pointer;
+}
+
+.images {
+    width: 100%;
+    max-width: 100%;
+}
+
+.active {
+    display: block;
 }
 
 h1 {
