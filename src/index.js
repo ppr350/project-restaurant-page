@@ -1,18 +1,38 @@
-import _ from 'lodash';
-import homeImage from './home-image.jpg'
+// import _ from 'lodash';
+import './style.css';
+import getClicks from './click-event';
 
-function hello() {
-    const element = document.createElement('div');
+(function () {
+    const body = document.getElementsByTagName('body')[0]
+    const contentContainer = document.querySelector('#content');
+    const topMenu = document.createElement('ul');
+    topMenu.classList.add('top-menu');
+    contentContainer.appendChild(topMenu);
 
-    element.innerHTML = _.join(['Hello', 'Restaurant Page'], ' ');
+    createHomeSections();
+    setDisplayContainer();
+})()
 
-    // testing image display using webpack :
-    // const myHomeImage = new Image();
-    // myHomeImage.src = homeImage;
-    // element.appendChild(myHomeImage);
+function createHomeSections() {
+    const menuArray = ['home', 'menu', 'about'];
+    const topMenu = document.querySelector('.top-menu');
+    for (let i = 0; i < 3; i++) {
+        const topMenuOptions = document.createElement('li');
+        topMenuOptions.classList.add(menuArray[i]);
+        topMenuOptions.classList.add('tabbed-options');
+        topMenuOptions.innerText = menuArray[i].toUpperCase();
+        topMenu.appendChild(topMenuOptions);
+        getClicks();
+    }
+};
 
-    return element;
+function setDisplayContainer() {
+    const contentContainer = document.querySelector('#content');
+    const contentBox = document.createElement('div');
+    contentBox.classList.add('content-box');
+    contentContainer.appendChild(contentBox);
 }
 
-document.body.appendChild(hello());
-
+function displayHome() {
+    console.log('display home')
+}
