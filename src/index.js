@@ -72,13 +72,16 @@ function getClicks() {
 function displayContent(e) {
     // const tabs = document.querySelector('.tabbed-options');
     const selectedOption = e.target;
-    console.log(selectedOption.classList[0])
-    const tabContents = document.querySelector('.inside-tab-content');
-    // console.log(selectedOption[0])
+    let allOption = document.querySelectorAll('.tabbed-options');
+    let tabContents = document.querySelectorAll('.inside-tab-content');
     for (let i = 0; i < 3; i++) {
-        selectedOption.classList.remove('active');
-        tabContents.style.display = 'none';
+        allOption[i].classList.remove('active');
+        tabContents[i].style.display = 'block';
+
+        // tabContents[i].classList.remove('active');
+
     }
+
     selectedOption.classList.add('active');
-    selectedOption + '-tab'.style.display = 'block';
+
 }

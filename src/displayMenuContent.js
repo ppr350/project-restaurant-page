@@ -1,3 +1,5 @@
+import menuImage from './menu-image.jpg'
+
 function displayMenuContent() {
     
     const tabContent = document.querySelector('.tab-content');
@@ -13,10 +15,10 @@ function displayMenuContent() {
     menuTitle.innerText = `MENU`;
     menuTab.appendChild(menuTitle);
 
-    // const menuPic = new Image();
-    // menuPic.src = menuImage;
-    // menuPic.classList.add('images');
-    // menuTab.appendChild(menuPic);
+    const menuPic = new Image();
+    menuPic.src = menuImage;
+    menuPic.classList.add('images');
+    menuTab.appendChild(menuPic);
 
     const menuMessage = document.createElement('h1');
     menuMessage.classList.add('message');
