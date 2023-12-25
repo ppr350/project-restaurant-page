@@ -2,14 +2,16 @@ import menuImage from './menu-image.jpg'
 
 function displayMenuContent() {
     
+    // Create and add menu section container to the main container //
     const tabContent = document.querySelector('.tab-content');
     const menuTab = document.createElement('div');
-    menuTab.classList.add('menu-tab');
+    menuTab.setAttribute('id','menu-tab');
     menuTab.classList.add('inside-tab-content');
     menuTab.style.display = 'none';
 
     tabContent.appendChild(menuTab)
 
+    // The rest of these codes inside this function are to create the content title, image and message //
     const menuTitle = document.createElement('h1');
     menuTitle.classList.add('menu-title');
     menuTitle.innerText = `MENU`;
